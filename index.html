@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Load More Results - Example</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="lib/css/style.css" />
+</head>
+<body>
+	<div class="container">
+
+		<h1>Load More Results - Example</h1>
+
+		<div class="list1">
+			<h2>List 1</h2>
+			<div class="loadMore">
+				<div class="item"><img src="lib/img/thumb.png"></div>
+				<div class="item"><img src="lib/img/thumb.png"></div>
+				<div class="item"><img src="lib/img/thumb.png"></div>
+				<div class="item"><img src="lib/img/thumb.png"></div>
+				<div class="item"><img src="lib/img/thumb.png"></div>
+				<div class="item"><img src="lib/img/thumb.png"></div>
+				<div class="item"><img src="lib/img/thumb.png"></div>
+				<div class="item"><img src="lib/img/thumb.png"></div>
+				<div class="item"><img src="lib/img/thumb.png"></div>
+				<div class="item"><img src="lib/img/thumb.png"></div>
+			</div>
+		</div>
+
+		<div class="list2">
+			<h2>List 2</h2>
+			<ul class="loadMore">
+				<li class="thumbnail"><img src="lib/img/thumb.png"></li>
+				<li class="thumbnail"><img src="lib/img/thumb.png"></li>
+				<li class="thumbnail"><img src="lib/img/thumb.png"></li>
+				<li class="thumbnail"><img src="lib/img/thumb.png"></li>
+				<li class="thumbnail"><img src="lib/img/thumb.png"></li>
+				<li class="thumbnail"><img src="lib/img/thumb.png"></li>
+				<li class="thumbnail"><img src="lib/img/thumb.png"></li>
+				<li class="thumbnail"><img src="lib/img/thumb.png"></li>
+				<li class="thumbnail"><img src="lib/img/thumb.png"></li>
+				<li class="thumbnail"><img src="lib/img/thumb.png"></li>
+			</ul>
+		</div>
+
+	</div>
+	<script src="lib/js/jquery-3.2.1.min.js"></script>
+	<script src="lib/js/loadMoreResults.js"></script>
+	<script type="text/javascript">
+		$('.list1 .loadMore').loadMoreResults();
+		$('.list2 .loadMore').loadMoreResults({
+			tag: {
+				name: 'li',
+				'class': 'thumbnail'
+			},
+			displayedItems: 5,
+			showItems: 2
+		});
+	</script>
+</body>
+</html>
